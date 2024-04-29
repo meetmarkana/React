@@ -1,0 +1,25 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style for table header */
+th {
+  background-color: #f2f2f2;
+}
+
+/* Alternate row color */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Style for table cells */
+td, th {
+  padding: 8px;
+  border: 1px solid #dddddd;
+}
+
+/* Hover effect on rows */
+tr:hover {
+  background-color: #dddddd;
+}
