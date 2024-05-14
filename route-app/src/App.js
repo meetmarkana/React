@@ -16,15 +16,16 @@ function App() {
     }
     setPosts([...posts, newPost])
   }
+  function deletepost(id){
+    setPosts(posts.filter((el)=>(
+      el.id !== id
+  )))}
   return (
     <Router>
       <div className="App">
      <Routes>
-      <Route path = "/" element = {<Home posts={posts}/>} ></Route>
-
+      <Route path="/" element={<Home posts={posts} deletepost={deletepost} />} />
       <Route path = "/add" element = {<Addpost addnewPost = {addnewPost}/>}></Route>
-        
-      
      </Routes>
      </div>
     </Router>
