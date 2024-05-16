@@ -1,33 +1,39 @@
 import './App.css';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Addpost from './Addpost';
 import { useState } from 'react';
+import Edit from './Edit';
 
 function App() {
+  const [posts, setPosts] = useState([]);
 
-  const [posts, setPosts] = useState([])
-
-  function addnewPost(title,Description){
+  function addnewPost(title, content) {
     let newPost = {
-      id : new Date().getTime(),
-      title : title,
-      Description : Description
-    }
-    setPosts([...posts, newPost])
+      id: new Date().getTime(),
+      title: title,
+      content: content,
+    };
+    setPosts([...posts, newPost]);
   }
-  function deletepost(id){
-    setPosts(posts.filter((el)=>(
-      el.id !== id
-  )))}
+
+  function deletPost(id) {
+    setPosts(posts.filter((el) => el.id !== id));
+  }
+
+  function updatePost(id, title, content) {
+    setPosts(posts.map(post => post.id === id ? { ...post, title: title, content: content } : post));
+  }
+
   return (
     <Router>
       <div className="App">
-     <Routes>
-      <Route path="/" element={<Home posts={posts} deletepost={deletepost} />} />
-      <Route path = "/add" element = {<Addpost addnewPost = {addnewPost}/>}></Route>
-     </Routes>
-     </div>
+        <Routes>
+          <Route path="/" element={<Home posts={posts} deletPost={deletPost} />} />
+          <Route path="/add" element={<Addpost addnewPost={addnewPost} />} />
+          <Route path="/edit/:id" element={<Edit updatePost={updatePost} posts={posts} />} />
+        </Routes>
+      </div>
     </Router>
   );
 }

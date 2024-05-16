@@ -1,150 +1,140 @@
-/* home.css */
-
-.home-container {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.home-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.home-header h1 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-}
-
-.post-list {
-  list-style: none;
-  padding: 0;
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
   margin: 0;
+  padding: 0;
 }
 
-.post-list li {
-  margin-bottom: 20px;
+.App {
+  text-align: center;
   padding: 20px;
-  border-bottom: 1px solid #ccc;
 }
 
-.post-list li:last-child {
-  border-bottom: none;
-}
-
-.post-title {
-  font-size: 18px;
-  font-weight: bold;
+h1 {
   color: #333;
-  margin-bottom: 10px;
 }
 
-.post-description {
-  font-size: 14px;
-  color: #666;
+/* Container Styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.delete-button {
-  background-color: #ff69b4;
+.card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  box-sizing: border-box;
+  margin: 20px auto;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+form button {
+  background-color: #007bff;
   color: #fff;
   border: none;
   padding: 10px 20px;
-  font-size: 14px;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  font-size: 16px;
 }
 
-.delete-button:hover {
-  background-color: #ff7f94;
+form button:hover {
+  background-color: #0056b3;
 }
 
+form button:focus {
+  outline: none;
+}
+
+.back-link,
 .add-post-link {
   display: block;
   text-align: center;
   margin-top: 20px;
-  font-size: 16px;
-  color: #337ab7;
+  color: #007bff;
   text-decoration: none;
+  font-weight: bold;
 }
 
+.back-link:hover,
 .add-post-link:hover {
-  color: #23527c;
+  text-decoration: underline;
 }
 
-
-/* addpost.css */
-
-.addpost-container {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
+.post-card {
+  background-color: #fff;
   border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.addpost-header {
-  text-align: center;
+  border-radius: 8px;
+  padding: 15px;
   margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.addpost-header h2 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
+.post-card h2 {
+  margin-top: 0;
+  color: #444;
 }
 
-.addpost-form {
-  display: flex;
-  flex-direction: column;
+.post-card p {
+  color: #666;
+  line-height: 1.6;
 }
 
-.addpost-form label {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.addpost-form input,
-.addpost-form textarea {
-  border: 1px solid #ccc;
-  padding: 10px;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.addpost-form input:focus,
-.addpost-form textarea:focus {
-  outline: none;
-  box-shadow: 0 0 2px 1px #337ab7;
-}
-
-.addpost-form button {
-  background-color: #337ab7;
+button {
+  background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
 }
 
-.addpost-form button:hover {
-  background-color: #23527c;
+button:hover {
+  background-color: #0056b3;
 }
 
-.back-link {
-  display: block;
-  text-align: center;
-  margin-top: 20px;
-  font-size: 16px;
-  color: #337ab7;
-  text-decoration: none;
-}
-
-.back-link:hover {
-  color: #23527c;
+button:focus {
+  outline: none;
 }
