@@ -1,41 +1,44 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import './App.css';
-
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 function Addpost({ addnewPost }) {
   const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-
+  const [content, setContent] = useState('');
+  const [image, setImage] = useState(null);
   const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
-    addnewPost(title, description);
+    addnewPost(title, content, image);
     navigate('/');
+  }
+
+  function handleImageChange(e) {
+    setImage(e.target.files[0]);
   }
 
   return (
     <div className="container">
-      <div className="card">
-        <h2>ADD POST</h2>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="title">Title:</label>
-          <input
-            type="text"
-            id="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-          <label htmlFor="description">Description:</label>
-          <textarea
-            id="description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          ></textarea>
-          <button type="submit">ADD POST</button>
-        </form>
-        <Link to="/" className="back-link">Back TO Home Page</Link>
-      </div>
+      <h1>Add New Post</h1>
+      <form onSubmit={handleSubmit}>
+        <h3>Title:</h3>
+        <input
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <h3>Content:</h3>
+        <textarea
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+        ></textarea>
+        <input
+          type="file"
+          onChange={handleImageChange}
+        />
+        <button type='submit'>ADD POST</button>
+      </form>
+      <Link to="/">Back To Home Page</Link>
     </div>
   );
 }

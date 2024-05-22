@@ -1,7 +1,6 @@
-/* Global Styles */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
+  background-color: #f5f5f5;
   margin: 0;
   padding: 0;
 }
@@ -11,130 +10,135 @@ body {
   padding: 20px;
 }
 
-h1 {
-  color: #333;
-}
-
-/* Container Styles */
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f4f4f4;
+  max-width: 800px;
+  margin: 50px auto;
   padding: 20px;
-  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
-.card {
-  background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 600px;
-  box-sizing: border-box;
-  margin: 20px auto;
-}
-
-h1, h2 {
-  margin-bottom: 20px;
-}
-
-form label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
+h1 {
+  font-size: 2.5rem;
   color: #333;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-form input,
-form textarea {
+input[type="text"],
+input[type="file"],
+textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  box-sizing: border-box;
-  font-size: 16px;
-  transition: border-color 0.3s;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
-form input:focus,
-form textarea:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-form button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  width: 100%;
-  font-size: 16px;
-}
-
-form button:hover {
-  background-color: #0056b3;
-}
-
-form button:focus {
-  outline: none;
-}
-
-.back-link,
-.add-post-link {
-  display: block;
-  text-align: center;
-  margin-top: 20px;
-  color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.back-link:hover,
-.add-post-link:hover {
-  text-decoration: underline;
-}
-
-.post-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.post-card h2 {
-  margin-top: 0;
-  color: #444;
-}
-
-.post-card p {
-  color: #666;
-  line-height: 1.6;
+textarea {
+  height: 150px;
+  resize: vertical;
 }
 
 button {
-  background-color: #007bff;
-  color: #fff;
+  padding: 10px 20px;
   border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
+  border-radius: 4px;
+  font-size: 1rem;
   cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
   transition: background-color 0.3s;
   margin-right: 10px;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #2980b9;
 }
 
-button:focus {
-  outline: none;
+button.delete {
+  background-color: #e74c3c;
+}
+
+button.delete:hover {
+  background-color: #c0392b;
+}
+
+button.edit {
+  background-color: #f39c12;
+}
+
+button.edit:hover {
+  background-color: #e67e22;
+}
+
+.post {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #fafafa;
+  text-align: left;
+  transition: box-shadow 0.3s;
+}
+
+.post:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.post h2 {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.post p {
+  font-size: 1rem;
+  color: #777;
+}
+
+.post img {
+  display: block;
+  margin: 10px 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.add-post-link {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #2ecc71;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.add-post-link:hover {
+  background-color: #27ae60;
+}
+
+a {
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #3498db;
+  font-size: 1rem;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+a:hover {
+  color: #2980b9;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

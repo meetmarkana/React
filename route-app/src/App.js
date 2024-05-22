@@ -8,11 +8,12 @@ import Edit from './Edit';
 function App() {
   const [posts, setPosts] = useState([]);
 
-  function addnewPost(title, content) {
+  function addnewPost(title, content, image) {
     let newPost = {
       id: new Date().getTime(),
       title: title,
       content: content,
+      image: image
     };
     setPosts([...posts, newPost]);
   }
@@ -21,8 +22,8 @@ function App() {
     setPosts(posts.filter((el) => el.id !== id));
   }
 
-  function updatePost(id, title, content) {
-    setPosts(posts.map(post => post.id === id ? { ...post, title: title, content: content } : post));
+  function updatePost(id, title, content, image) {
+    setPosts(posts.map(post => post.id === id ? { ...post, title: title, content: content, image: image } : post));
   }
 
   return (
@@ -31,7 +32,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home posts={posts} deletPost={deletPost} />} />
           <Route path="/add" element={<Addpost addnewPost={addnewPost} />} />
-          <Route path="/edit/:id" element={<Edit updatePost={updatePost} posts={posts} />} />
+          <Route path='/edit/:id' element={<Edit updatePost={updatePost} posts={posts} />} />
         </Routes>
       </div>
     </Router>
