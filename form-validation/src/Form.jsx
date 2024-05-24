@@ -54,7 +54,7 @@ function Form() {
         {errors.name && <span className="error-message">{errors.name}</span>}
 
         <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" value={formData.email}onChange={handleChange} className={errors.email ? 'input-error' : ''}/>
+        <input type="email" id="email" name="ecdmail" value={formData.email}onChange={handleChange} className={errors.email ? 'input-error' : ''}/>
         {errors.email && <span className="error-message">{errors.email}</span>}
 
         <label htmlFor="phoneNumber">Phone Number:</label>

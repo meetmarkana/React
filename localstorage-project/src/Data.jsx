@@ -33,7 +33,7 @@ function Data() {
 
         <input type="text" placeholder='Enter Movie Name' value={moviename} onChange={(e)=>setMoviename(e.target.value)}/><br/><br/><br/>
         <input type="text" placeholder='Enter Description' value={moviedescription} onChange={(e)=>setMovieDescription(e.target.value)}/><br/><br/><br/>
-        <input type="text" placeholder='Enter Ratings' value={rating} onChange={(e)=>setRatings(e.target.value)}/><br/><br/><br/>
+        <input type="number" placeholder='Enter Ratings /10' value={rating} onChange={(e)=>setRatings(e.target.value)}/><br/><br/><br/>
         <button onClick={addMovie}>Add</button>
 
 

@@ -16,7 +16,7 @@ function App() {
 
       setData(jsondata)
       console.log(data)
-    }
+    }cd 
     fetchData()
   },[])
 

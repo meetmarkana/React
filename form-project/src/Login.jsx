@@ -67,10 +67,7 @@ else{
              {
         isLoggedIn ?
         (
-            <>
-           
-               
-                
+            <>                
              {
     
     <div className='heading main'   >
