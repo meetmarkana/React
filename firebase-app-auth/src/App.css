@@ -1,0 +1,97 @@
+/* src/styles.css */
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-container, .home-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+h2, h1 {
+  margin-bottom: 20px;
+}
+
+/* Auth Component Styles */
+input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+button:not([type="submit"]) {
+  background-color: #6c757d;
+  color: white;
+  margin-top: 10px;
+}
+
+button:not([type="submit"]):hover {
+  background-color: #5a6268;
+}
+
+/* Facebook Login Button */
+.facebook-login-button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #3b5998;
+  color: white;
+  cursor: pointer;
+}
+
+.facebook-login-button:hover {
+  background-color: #334d84;
+}
+
+/* Home Component Styles */
+.home-container h1 {
+  margin-bottom: 30px;
+}
+
+.logout-button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #d9534f;
+  color: white;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #c9302c;
+}
