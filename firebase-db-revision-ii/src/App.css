@@ -1,0 +1,75 @@
+.registration-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Form Title */
+.registration-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Form Styling */
+.registration-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-form label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="password"] {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.registration-form input[type="submit"] {
+  padding: 0.7rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registration-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Registered Users List */
+.registration-container h2 {
+  text-align: center;
+  color: #333;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.registration-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.registration-container ul li {
+  background-color: #fff;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+  text-align: center;
+}
