@@ -1,0 +1,25 @@
+.movie-list {
+    margin-bottom: 20px;
+  }
+  
+  .movie-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-item h3 {
+    margin: 0;
+  }
+  
+  .movie-item p {
+    margin: 5px 0;
+  }
+  
+  .movie-item button {
+    background-color: #61dafb;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
